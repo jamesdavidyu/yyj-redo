@@ -47,7 +47,7 @@ export const Computer = () => {
         <div className="absolute mt-72">
           {/* TODO: need to make this click through to youtube playlist and singles */}
           <Button variant="link" onClick={() => setPreview(true)}>
-            Preview
+            Preview Films
           </Button>
         </div>
       )}

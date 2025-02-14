@@ -47,7 +47,7 @@ export const Phone = () => {
       ) : (
         <div className="absolute mt-72">
           <Button variant="link" onClick={() => setPreview(true)}>
-            Preview
+            Preview Music
           </Button>
         </div>
       )}
