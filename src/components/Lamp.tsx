@@ -12,7 +12,16 @@ export const Lamp = () => {
       <Button
         className="bg-white w-96 h-[30%] border-none cursor-pointer rounded-b-none rounded-t-full hover:bg-white/90"
         onClick={() => setOn(!on)}
-      />
+      >
+        <a href="https://planorban.com">
+          <img
+            src="https://m2my1rq4tt.ufs.sh/f/AR95GDbqfmiLSgxEf8i4ZGeSIWMpQRy6gK7A5vNl0HaJDrVx"
+            alt="Planorban Logo"
+            className="rounded-full"
+            title="Developed by Planorban"
+          />
+        </a>
+      </Button>
       {on ? (
         <Card className="bg-gradient-to-b from-orange-600 to-black w-96 h-[70%] border-none rounded-none" />
       ) : (
