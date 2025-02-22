@@ -1,6 +1,11 @@
 // TODO: install axios
 import axios, { AxiosInstance } from "axios";
 
+interface RegisterPayload {
+    username: string;
+    password: string;
+}
+
 export const getYyjApiHttpClient = (accessToken?: string) => {
     const instance: AxiosInstance = axios.create({
         baseURL: process.env.YYJ_API_URL,
@@ -17,5 +22,13 @@ export const getYyjApiHttpClient = (accessToken?: string) => {
 class YyjApiHttpClient {
     constructor(private client: AxiosInstance) {}
 
-    // TODO: need to create java/mongodb or node/mongodb api
+    public async registerUser(payload: RegisterPayload) {
+        const response = await this.client
+            .post("/api/v1/register", payload)
+            .catch((e) => {
+                throw new Error(e);
+            })
+        
+        return response;
+    }
 }
